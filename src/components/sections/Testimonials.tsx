@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Quote } from 'lucide-react'
 
 const stories = [
@@ -40,11 +41,12 @@ export default function Testimonials() {
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full overflow-hidden bg-slate-200">
-                  <img 
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-slate-200 relative">
+                  <Image 
                     src={story.image} 
                     alt={story.name} 
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div>

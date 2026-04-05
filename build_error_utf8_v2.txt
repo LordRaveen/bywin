@@ -1,0 +1,47 @@
+﻿
+> bywin@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.2.2 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 8.7s
+  Running TypeScript ...
+node.exe : Failed to type check.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpeci 
+   fied: (Failed to type check.:Strin  
+  g) [], RemoteException
+    + FullyQualifiedErrorId : NativeCo 
+   mmandError
+ 
+
+./sanity.config.ts:3:28
+Type error: Cannot find module 
+'@sanity/vision' or its corresponding 
+type declarations.
+
+  [90m1 |[0m [36mimport[0m { 
+defineConfig } [36mfrom[0m 
+[32m'sanity'[0m
+  [90m2 |[0m [36mimport[0m { 
+structureTool } [36mfrom[0m 
+[32m'sanity/structure'[0m
+[31m[1m>[0m [90m3 |[0m 
+[36mimport[0m { visionTool } 
+[36mfrom[0m [32m'@sanity/vision'[0m
+  [90m  |[0m                         
+   [31m[1m^[0m
+  [90m4 |[0m [36mimport[0m { 
+schemaTypes } [36mfrom[0m 
+[32m'./src/sanity/schemaTypes'[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m 
+[36mdefault[0m defineConfig({
+Next.js build worker exited with code: 
+1 and signal: null

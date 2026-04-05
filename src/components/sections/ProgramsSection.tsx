@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Bird, Fish, Scissors } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -43,11 +44,12 @@ export default function ProgramsSection() {
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {programs.map((program) => (
             <div key={program.title} className="group relative overflow-hidden rounded-3xl bg-white shadow-xl transition-all hover:-translate-y-2">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img 
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <Image 
                   src={program.image} 
                   alt={program.title} 
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-8">

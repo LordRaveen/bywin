@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -19,7 +20,7 @@ export default function Hero() {
               <Heart className="h-4 w-4" />
               <span>Building Brighter Futures</span>
             </div>
-            <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+            <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-balance">
               Empowering <span className="text-primary">Women</span> and <span className="text-secondary">Youth</span> for a Better Tomorrow
             </h1>
             <p className="mt-6 text-xl leading-relaxed text-slate-600 max-w-xl">
@@ -40,15 +41,14 @@ export default function Hero() {
 
           {/* Visual Piece */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl bg-slate-200 overflow-hidden shadow-2xl">
-              {/* This would be a real image of beneficiaries */}
-              <div className="absolute inset-0 flex items-center justify-center bg-slate-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2813&auto=format&fit=crop" 
-                  alt="Women working in community project" 
-                  className="h-full w-full object-cover"
-                />
-              </div>
+            <div className="aspect-[4/3] rounded-3xl bg-slate-200 overflow-hidden shadow-2xl relative">
+              <Image 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2813&auto=format&fit=crop" 
+                alt="Women working in community project" 
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             {/* Floating Trust Card */}
             <div className="absolute -bottom-8 -left-8 rounded-2xl bg-white p-6 shadow-xl hidden md:block">

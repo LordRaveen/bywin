@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Heart, Mail, Phone, MapPin } from "lucide-react"
+import { Globe, Heart, Mail, Phone, MapPin } from "lucide-react"
 
 const footerLinks = [
   {
@@ -25,7 +25,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer-bg-slate-50 border-t bg-slate-50 pt-16 pb-8">
+    <footer className="border-t bg-slate-50 pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
           {/* Logo & Desc */}
@@ -41,16 +41,16 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex space-x-4">
               <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Linkedin className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </Link>
             </div>
           </div>

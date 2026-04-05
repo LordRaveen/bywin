@@ -15,11 +15,12 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Image side */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-3xl bg-slate-200 overflow-hidden shadow-2xl">
-              <img 
+            <div className="aspect-[4/5] rounded-3xl bg-slate-200 overflow-hidden shadow-2xl relative">
+              <Image 
                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2670&auto=format&fit=crop" 
                 alt="Our mission in action" 
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
             {/* Small floating image/card if needed */}
@@ -51,11 +52,12 @@ export default function AboutSection() {
             <div className="mt-12 flex items-center gap-6">
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-12 w-12 rounded-full border-4 border-white bg-slate-200 overflow-hidden">
-                    <img 
+                  <div key={i} className="h-12 w-12 rounded-full border-4 border-white bg-slate-200 overflow-hidden relative">
+                    <Image 
                       src={`https://i.pravatar.cc/100?u=${i}`} 
                       alt={`Beneficiary ${i}`} 
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 ))}
