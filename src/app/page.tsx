@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import PartnerLogos from "@/components/sections/PartnerLogos";
 import ImpactStats from "@/components/sections/ImpactStats";
 import ProgramsSection from "@/components/sections/ProgramsSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -9,13 +10,14 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col bg-white">
       <Navbar />
-      <article className="flex-grow">
+      <article className="flex-grow bg-white">
         <Hero />
+        <PartnerLogos />
+        <AboutSection />
         <ImpactStats />
         <ProgramsSection />
-        <AboutSection />
         <Testimonials />
         <CTASection />
       </article>

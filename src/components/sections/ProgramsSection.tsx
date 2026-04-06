@@ -5,68 +5,104 @@ import { Button } from '@/components/ui/button'
 
 const programs = [
   {
+    id: '01',
     title: 'Poultry Farming Training',
-    description: 'Providing sustainable livelihoods through poultry management training and initial chick supply to marginalized women.',
-    icon: <Bird className="h-10 w-10" />,
-    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=2673&auto=format&fit=crop',
-    color: 'bg-primary'
+    description: 'Providing sustainable livelihoods through poultry management training and initial chick supply to marginalized women across 10+ states.',
+    icon: <Bird className="h-6 w-6" />,
+    image: '/assets/images/program-poultry.png',
+    color: 'text-amber-500'
   },
   {
+    id: '02',
     title: 'Sustainable Fish Farming',
-    description: 'Teaching modern aquaculture techniques to youth, ensuring food security and consistent income generations.',
-    icon: <Fish className="h-10 w-10" />,
-    image: 'https://images.unsplash.com/photo-1524704685771-3181d83ebb92?q=80&w=2669&auto=format&fit=crop',
-    color: 'bg-secondary'
+    description: 'Teaching modern aquaculture techniques to youth, ensuring food security and consistent income generations with eco-friendly methods.',
+    icon: <Fish className="h-6 w-6" />,
+    image: '/assets/images/program-fish-farming.png',
+    color: 'text-sky-500'
   },
   {
+    id: '03',
     title: 'Sewing & Skills Acquisition',
-    description: 'Equipping women with professional tailoring skills and vocational training to build their own businesses.',
-    icon: <Scissors className="h-10 w-10" />,
-    image: 'https://images.unsplash.com/photo-1550584552-46346893a216?q=80&w=2674&auto=format&fit=crop',
-    color: 'bg-accent'
+    description: 'Equipping women with professional tailoring skills and vocational training to build their own independent small-scale businesses.',
+    icon: <Scissors className="h-6 w-6" />,
+    image: '/assets/images/program-sewing.png',
+    color: 'text-lime-500'
   }
 ]
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="bg-slate-50 py-24 sm:py-32">
+    <section id="programs" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Empowerment Programs</h2>
-            <p className="mt-4 text-lg text-slate-600">We don&apos;t just give hand-outs; we give hand-ups. Our programs are designed for long-term sustainability and independence.</p>
+        <div className="flex flex-col items-start gap-4">
+          <span className="text-sm font-bold tracking-widest text-[#1b5e4c] uppercase">Empowerment</span>
+          <div className="flex flex-col md:flex-row md:items-end justify-between w-full gap-8">
+            <h2 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl uppercase leading-tight">
+              Our Focused <br />
+              Programs
+            </h2>
+            <div className="max-w-md">
+              <p className="text-lg text-slate-500 leading-relaxed">
+                Hand-ups, not hand-outs. We design interventions that empower communities to sustain themselves through skills and local resources.
+              </p>
+              <Link 
+                href="/programs" 
+                className="mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#1b5e4c] hover:text-secondary group transition-colors"
+              >
+                View all interventions
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
-          <Button asChild variant="outline" className="rounded-full">
-            <Link href="/programs">View All Programs</Link>
-          </Button>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-3">
           {programs.map((program) => (
-            <div key={program.title} className="group relative overflow-hidden rounded-3xl bg-white shadow-xl transition-all hover:-translate-y-2">
-              <div className="aspect-[16/10] overflow-hidden relative">
+            <div key={program.title} className="group relative bg-white border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
+              <div className="aspect-[4/5] overflow-hidden relative">
                 <Image 
                   src={program.image} 
                   alt={program.title} 
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-              </div>
-              <div className="p-8">
-                <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ${program.color} text-white shadow-lg`}>
-                  {program.icon}
+                
+                {/* Number Overlay */}
+                <div className="absolute top-6 left-6 z-20">
+                  <span className="text-6xl font-black text-transparent opacity-80" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.8)' }}>
+                    {program.id}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">{program.title}</h3>
-                <p className="mt-4 text-slate-600 leading-relaxed">
+
+                {/* Corner Decorative Accent */}
+                <div className="absolute bottom-0 right-0 h-16 w-16 bg-white flex items-center justify-center translate-x-4 translate-y-4 rotate-45 group-hover:bg-secondary transition-colors" />
+                <div className="absolute bottom-0 right-0 h-8 w-8 bg-white z-10 flex items-center justify-center p-1">
+                  <div className={program.color}>
+                    {program.icon}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-8">
+                <h3 className="text-2xl font-black tracking-tight text-slate-900 leading-tight">
+                  {program.title}
+                </h3>
+                <p className="mt-4 text-slate-500 text-sm leading-relaxed">
                   {program.description}
                 </p>
-                <Link 
-                  href={`/programs/${program.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="mt-6 flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-accent"
-                >
-                  Learn More
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                
+                <div className="mt-8 pt-6 border-t border-slate-100">
+                  <Button asChild variant="ghost" className="h-auto p-0 font-black text-xs uppercase tracking-[0.2em] group-hover:text-primary transition-colors">
+                    <Link href={`/programs/${program.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-4">
+                      Explore Details
+                      <div className="h-8 w-8 flex items-center justify-center border border-slate-200 group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           ))}

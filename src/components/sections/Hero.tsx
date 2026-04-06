@@ -1,65 +1,95 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Heart } from "lucide-react"
+import { ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 pt-16 pb-24 sm:pt-24 sm:pb-32 lg:pt-32 lg:pb-40">
-      {/* Background patterns */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-secondary blur-3xl" />
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary pt-32 pb-20 lg:pt-48 lg:pb-32">
+      {/* Decorative Dots - Left */}
+      <div className="absolute top-40 left-8 z-20 hidden xl:block">
+        <div className="grid grid-cols-4 gap-3">
+          {[...Array(20)].map((_, i) => (
+            <div key={i} className="h-1.5 w-1.5 rounded-full bg-secondary/80" />
+          ))}
+        </div>
+      </div>
+
+      {/* Decorative Hollow Circle - Bottom Left */}
+      <div className="absolute bottom-40 left-20 z-10 opacity-40 hidden lg:block">
+        <div className="h-4 w-4 rounded-full border-2 border-secondary" />
+      </div>
+
+      {/* Decorative Triangle - Left Center */}
+      <div className="absolute top-1/2 left-4 z-10 opacity-60 hidden lg:block">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f8d568" strokeWidth="2.5" className="rotate-[15deg]">
+          <path d="M3 20L12 4L21 20H3Z" />
+        </svg>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-          {/* Content */}
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-              <Heart className="h-4 w-4" />
-              <span>Building Brighter Futures</span>
-            </div>
-            <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-balance">
-              Empowering <span className="text-primary">Women</span> and <span className="text-secondary">Youth</span> for a Better Tomorrow
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Content Left */}
+          <div className="max-w-xl text-left">
+            <h1 className="text-5xl font-black tracking-tight text-white sm:text-7xl leading-[1.1]">
+              Charity is <br />
+              an <span className="underline-yellow">Act of</span> <br />
+              A Soft Heart!
             </h1>
-            <p className="mt-6 text-xl leading-relaxed text-slate-600 max-w-xl">
-              Brighter Youth and Women Initiative (BYWI) is dedicated to breaking the cycle of poverty through skills acquisition, sustainable agriculture, and community empowerment.
+            <p className="mt-8 text-lg leading-relaxed text-white/70 font-medium max-w-md">
+              Join us in our mission to build brighter futures for women and youth through sustainable community-led initiatives in agriculture and vocational training.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button asChild size="lg" className="h-14 rounded-full px-8 text-base bg-primary hover:bg-accent text-white">
-                <Link href="/get-involved" className="flex items-center gap-2">
-                  Join Our Mission
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+            <div className="mt-12 flex flex-wrap items-center gap-10">
+              <Button 
+                asChild 
+                size="lg" 
+                className="h-16 rounded-none px-10 text-lg bg-secondary hover:bg-secondary/90 text-primary font-black shadow-xl transition-all hover:-translate-y-1"
+              >
+                <Link href="/get-involved">Join our mission</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="h-14 rounded-full px-8 text-base border-primary text-primary hover:bg-primary/5">
-                <Link href="/about">Learn More</Link>
-              </Button>
+              <button className="flex items-center gap-3 group">
+                <div className="flex h-12 w-12 items-center justify-center rounded-none border-2 border-white/20 text-white group-hover:bg-white/10 transition-all">
+                  <Play className="h-4 w-4 fill-current ml-1" />
+                </div>
+                <span className="text-lg font-bold text-white group-hover:text-secondary transition-colors">Learn more</span>
+              </button>
             </div>
           </div>
 
-          {/* Visual Piece */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl bg-slate-200 overflow-hidden shadow-2xl relative">
-              <Image 
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2813&auto=format&fit=crop" 
-                alt="Women working in community project" 
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            {/* Floating Trust Card */}
-            <div className="absolute -bottom-8 -left-8 rounded-2xl bg-white p-6 shadow-xl hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold text-xl">
-                  300+
+          {/* Visual Piece - Circular Motif Right */}
+          <div className="relative mx-auto lg:ml-auto lg:mr-0 group">
+            <div className="relative h-[400px] w-[400px] sm:h-[520px] sm:w-[520px]">
+              {/* Outer Decorative Circle/Shadow */}
+              <div className="absolute inset-0 rounded-full bg-white/5 border border-white/10 scale-105" />
+              <div className="absolute -inset-10 rounded-full border-[20px] border-white/5 opacity-50 blur-sm" />
+
+              {/* Main Image Circle */}
+              <div className="absolute inset-0 rounded-full border-[12px] border-white/10 overflow-hidden shadow-2xl z-10">
+                <Image 
+                  src="/assets/images/volunteers-charity.png" 
+                  alt="Our dedicated volunteers" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              </div>
+
+              {/* Decorative Dots - Bottom Right of Image */}
+              <div className="absolute -bottom-6 -right-6 z-20 hidden md:block">
+                <div className="grid grid-cols-4 gap-2">
+                  {[...Array(16)].map((_, i) => (
+                    <div key={i} className="h-1 w-1 rounded-full bg-secondary" />
+                  ))}
                 </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-900">Women Trained</p>
-                  <p className="text-xs text-slate-500">In sustainable farming</p>
-                </div>
+              </div>
+
+              {/* Floating Triangle - Top Right of Image */}
+              <div className="absolute -top-10 -right-4 z-20 opacity-80 hidden md:block">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f8d568" strokeWidth="2.5" className="rotate-[-15deg]">
+                  <path d="M3 20L12 4L21 20H3Z" />
+                </svg>
               </div>
             </div>
           </div>

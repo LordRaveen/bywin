@@ -1,89 +1,118 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import Link from 'next/link'
-import { Menu, X, Heart } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Menu, X, Heart } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { name: 'About', href: '/about' },
-  { name: 'Programs', href: '/programs' },
-  { name: 'Impact', href: '/impact' },
-  { name: 'Get Involved', href: '/get-involved' },
-  { name: 'Contact', href: '/contact' },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "#about" },
+  { name: "Explore NGOs", href: "#programs" },
+  { name: "Are You a Volunteer?", href: "#join" },
+  { name: "Contact", href: "#contact" },
 ]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
-                <Heart className="h-6 w-6" />
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-display text-xl font-bold tracking-tight text-primary">BYWI</span>
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-secondary">Brighter Youth & Women</span>
-              </div>
-            </Link>
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6 lg:px-8",
+        isScrolled 
+          ? "bg-primary/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10" 
+          : "bg-transparent py-8"
+      )}
+    >
+      <div className="mx-auto max-w-7xl flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="bg-secondary p-1.5 rounded-none group-hover:rotate-0 transition-transform">
+            <Heart className="h-5 w-5 text-primary fill-current" />
           </div>
+          <span className="text-2xl font-black tracking-tighter text-white">NGO</span>
+        </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:block">
-            <div className="flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm font-medium text-slate-600 transition-colors hover:text-primary"
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Button asChild className="bg-primary hover:bg-accent text-white rounded-full px-6">
-                <Link href="/donate">Donate Now</Link>
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 hover:text-primary focus:outline-none"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Nav */}
-      <div className={cn("lg:hidden", isOpen ? "block" : "hidden")}>
-        <div className="space-y-1 px-4 pb-3 pt-2 sm:px-3 border-t bg-white">
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="block rounded-md px-3 py-2 text-base font-medium text-slate-600 hover:bg-primary/5 hover:text-primary"
-              onClick={() => setIsOpen(false)}
+              className={cn(
+                "text-[15px] font-medium text-white/90 hover:text-secondary transition-colors relative group",
+                link.name === "Home" && "text-secondary"
+              )}
+            >
+              {link.name}
+              {link.name === "Home" && (
+                <span className="absolute -bottom-1 left-0 w-4 h-0.5 bg-secondary rounded-full" />
+              )}
+            </Link>
+          ))}
+        </div>
+
+        {/* Actions */}
+        <div className="hidden lg:flex items-center gap-4">
+          <Button 
+            asChild
+            className="bg-secondary hover:bg-secondary/90 text-primary font-bold rounded-none px-8 h-12 shadow-lg shadow-black/10"
+          >
+            <Link href="/login">Login</Link>
+          </Button>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="lg:hidden text-white p-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-primary lg:hidden transition-transform duration-500 ease-in-out",
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <div className="flex flex-col items-center justify-center h-full gap-8 p-8 relative">
+          <button 
+            className="absolute top-8 right-8 text-white" 
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <X className="h-8 w-8" />
+          </button>
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-2xl font-bold text-white hover:text-secondary"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
-          <div className="mt-4 px-3 pb-4">
-            <Button asChild className="w-full bg-primary hover:bg-accent text-white rounded-full">
-              <Link href="/donate" onClick={() => setIsOpen(false)}>
-                Donate Now
-              </Link>
-            </Button>
-          </div>
+          <Button 
+            asChild
+            size="lg"
+            className="bg-secondary hover:bg-secondary/90 text-primary font-bold rounded-xl w-full max-w-xs h-14"
+          >
+            <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
+          </Button>
         </div>
       </div>
     </nav>

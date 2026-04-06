@@ -1,27 +1,51 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #1b5e4c;
+  --primary: 165 55% 24%;
+  --primary-foreground: 0 0% 100%;
+}
+
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary: #15803d;
+  --color-primary: #1b5e4c; /* Deep Green */
   --color-primary-foreground: #ffffff;
-  --color-secondary: #f59e0b;
-  --color-secondary-foreground: #000000;
-  --color-accent: #166534;
+  --color-secondary: #f8d568; /* Golden Yellow */
+  --color-secondary-foreground: #1b5e4c;
+  --color-accent: #f8d568;
   --color-muted: #f0fdf4;
-  --color-muted-foreground: #3f6212;
+  --color-muted-foreground: #1b5e4c;
 
-  --radius-lg: 0.75rem;
-  --radius-md: 0.5rem;
-  --radius-sm: 0.25rem;
+  --radius-lg: 0rem;
+  --radius-md: 0rem;
+  --radius-sm: 0rem;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #020617;
-  --primary: 142.1 76.2% 36.3%;
-  --primary-foreground: 355.7 100% 97.3%;
+.underline-yellow {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-yellow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  width: 100%;
+  height: 0.4em;
+  background-color: rgba(248, 213, 104, 0.4);
+  z-index: -1;
+  border-radius: 9999px;
+  transform: skewX(-15deg);
 }
 
 body {
@@ -42,8 +66,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
 }
