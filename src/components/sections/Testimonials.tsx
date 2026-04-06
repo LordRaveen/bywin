@@ -49,7 +49,7 @@ export default function Testimonials() {
                 </p>
                 
                 <div className="mt-auto flex items-center gap-6 pt-8 border-t border-emerald-800/50">
-                  <div className="h-20 w-20 flex-shrink-0 border-4 border-white shadow-xl relative grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <div className="h-20 w-20 flex-shrink-0 border-4 border-white shadow-xl relative grayscale group-hover:grayscale-0 transition-all duration-500 rounded-none">
                     <Image 
                       src={story.image} 
                       alt={story.name} 

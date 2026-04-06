@@ -6,6 +6,8 @@ import ProgramsSection from "@/components/sections/ProgramsSection";
 import AboutSection from "@/components/sections/AboutSection";
 import Testimonials from "@/components/sections/Testimonials";
 import CTASection from "@/components/sections/CTASection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -18,8 +20,10 @@ export default function Home() {
         <AboutSection />
         <ImpactStats />
         <ProgramsSection />
+        <ServicesSection />
         <Testimonials />
         <CTASection />
+        <ContactSection />
       </article>
       <Footer />
     </main>
