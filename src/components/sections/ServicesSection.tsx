@@ -60,11 +60,11 @@ export default function ServicesSection() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-20 max-w-3xl">
-          <h2 className="text-4xl font-black text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight uppercase">
             Our Work <br />
             in <span className="underline-yellow">Action</span>
           </h2>
-          <p className="mt-8 text-lg text-slate-600 font-medium leading-relaxed">
+          <p className="mt-8 text-base md:text-sm text-slate-600 font-medium leading-relaxed">
             Across different communities, we continue to implement projects that address real challenges and create meaningful change.
             From training sessions to community outreach programs, our work is focused on delivering practical results that improve lives.
           </p>

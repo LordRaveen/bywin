@@ -37,12 +37,12 @@ export default function ProgramsSection() {
         <div className="flex flex-col items-start gap-4">
           <span className="text-sm font-bold tracking-widest text-[#1b5e4c] uppercase">Empowerment</span>
           <div className="flex flex-col md:flex-row md:items-end justify-between w-full gap-8">
-            <h2 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl uppercase leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 uppercase leading-tight">
               What <br />
               We Do
             </h2>
             <div className="max-w-md">
-              <p className="text-lg text-slate-600 font-medium leading-relaxed">
+              <p className="text-base md:text-sm text-slate-600 font-medium leading-relaxed">
                 We provide practical, life-changing support through targeted programs designed to meet real needs in our communities.
               </p>
               <Link 
@@ -59,7 +59,7 @@ export default function ProgramsSection() {
         <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-3">
           {programs.map((program) => (
             <div key={program.title} className="group relative bg-white border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
-              <div className="aspect-[4/5] overflow-hidden relative">
+              <div className="aspect-[7/5] overflow-hidden relative">
                 <Image 
                   src={program.image} 
                   alt={program.title} 
@@ -77,7 +77,7 @@ export default function ProgramsSection() {
                 </div>
 
                 {/* Corner Decorative Accent */}
-                <div className="absolute bottom-0 right-0 h-16 w-16 bg-white flex items-center justify-center translate-x-4 translate-y-4 rotate-45 group-hover:bg-secondary transition-colors" />
+                <div className="absolute bottom-0 right-0 h-16 w-16 bg-white flex items-center justify-center translate-x-4 translate-y-4 rotate-45 group-hover:bg-white transition-colors" />
                 <div className="absolute bottom-0 right-0 h-8 w-8 bg-white z-10 flex items-center justify-center p-1">
                   <div className={program.color}>
                     {program.icon}

@@ -32,10 +32,10 @@ export default function ImpactStats() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           <span className="text-secondary font-bold tracking-widest uppercase text-sm">Our Impact</span>
-          <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-6xl uppercase">
+          <h2 className="mt-4 text-3xl md:text-5xl font-black tracking-tight text-white uppercase">
             Our Impact <span className="text-secondary">So Far</span>
           </h2>
-          <p className="mt-6 text-xl text-emerald-50/70 max-w-2xl">
+          <p className="mt-4 text-base md:text-sm text-emerald-50/70 max-w-2xl">
             Every number represents a life changed and a future restored.
           </p>
         </div>
@@ -47,10 +47,10 @@ export default function ImpactStats() {
                 {stat.icon}
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-5xl font-black text-white tracking-tighter">{stat.value}</span>
+                <span className="text-4xl font-black text-white tracking-tighter">{stat.value}</span>
                 <span className="text-sm font-bold uppercase tracking-widest text-emerald-400">{stat.label}</span>
               </div>
-              <p className="mt-6 text-sm leading-relaxed text-emerald-50/50">
+              <p className="mt-4 text-sm leading-relaxed text-emerald-50/50">
                 {stat.description}
               </p>
             </div>

@@ -19,13 +19,13 @@ export default function AboutSection() {
           {/* Content Side (5 columns) */}
           <div className="lg:col-span-5 relative z-10">
             <span className="text-sm font-bold tracking-widest text-[#1b5e4c] uppercase">About us</span>
-            <h2 className="mt-4 text-5xl font-black tracking-tight text-slate-900 sm:text-6xl leading-[1.1]">
+            <h2 className="mt-4 text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.2] md:leading-[1.1]">
               We are building <br />
               lives, <span className="underline-yellow">one opportunity</span> <br />
               at a time
             </h2>
             
-            <div className="mt-8 space-y-6 text-slate-600 font-medium leading-relaxed max-w-xl">
+            <div className="mt-8 space-y-6 text-slate-600 font-medium text-base md:text-sm leading-relaxed max-w-xl">
               <p>
                 At Brighter Youth and Women Initiative, we believe that real change begins when people are given the tools to improve their own lives.
               </p>
@@ -38,7 +38,7 @@ export default function AboutSection() {
             </div>
 
             <div className="mt-10">
-              <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary font-black rounded-none h-14 px-10 text-lg shadow-xl shrink-0">
+              <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary font-black rounded-none h-14 px-10 text-sm shadow-xl w-full sm:w-auto text-center justify-center">
                 <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>

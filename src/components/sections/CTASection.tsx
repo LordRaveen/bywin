@@ -30,23 +30,23 @@ export default function CTASection() {
 
             <div className="relative z-10 max-w-xl">
               <span className="text-secondary font-bold tracking-widest uppercase text-sm">Be Part of the Change</span>
-              <h2 className="mt-6 text-4xl lg:text-7xl font-black tracking-tight text-white uppercase leading-none">
+              <h2 className="mt-6 text-3xl md:text-5xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.1] lg:leading-none">
                 Creating Lasting <br />
                 <span className="text-secondary">Impact</span> Together
               </h2>
-              <p className="mt-8 text-xl text-emerald-50/80 leading-relaxed max-w-md font-medium">
+              <p className="mt-8 text-lg md:text-xl text-emerald-50/80 leading-relaxed max-w-md font-medium">
                 Creating lasting impact requires collective effort. You can support our mission in several ways: Partner with us, Volunteer your time, or Support our programs through donations.
               </p>
 
-              <div className="mt-12 flex flex-col sm:flex-row gap-6">
-                <Button asChild className="bg-secondary hover:bg-secondary/90 text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest shadow-xl group">
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <Button asChild className="bg-secondary hover:bg-secondary/90 text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest shadow-xl group w-full sm:w-auto text-center justify-center">
                   <Link href="/donate" className="flex items-center gap-3">
                     Donate Now
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
                 
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest transition-all">
+                <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest transition-all w-full sm:w-auto text-center justify-center">
                   <Link href="/get-involved" className="flex items-center gap-3">
                     Become a Volunteer
                     <Users className="h-5 w-5" />

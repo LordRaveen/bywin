@@ -31,20 +31,20 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Content Left */}
           <div className="max-w-xl text-left">
-            <h1 className="text-xl font-black tracking-tight text-white sm:text-5xl leading-[1.1]">
+            <h1 className="text-3xl font-black tracking-tight text-white md:text-5xl leading-[1.2] md:leading-[1.1]">
               Empowering <br />
               <span className="underline-yellow">Women and Youth</span> <br />
               to Build Sustainable<br />
               Futures
             </h1>
-            <p className="mt-8 text-sm leading-relaxed text-white/70 font-medium max-w-md">
+            <p className="mt-8 text-base md:text-sm leading-relaxed text-white/70 font-medium max-w-md">
               Brighter Youth and Women Initiative (BYWIN) is committed to equipping women, young people, and vulnerable individuals with the skills, support, and opportunities they need to thrive and become self-reliant.
             </p>
-            <div className="mt-12 flex flex-wrap items-center gap-10">
+            <div className="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-10">
               <Button 
                 asChild 
                 size="lg" 
-                className="h-16 rounded-none px-10 text-sm bg-secondary hover:bg-secondary/90 text-primary font-black shadow-xl transition-all hover:-translate-y-1"
+                className="h-16 rounded-none px-10 text-sm bg-secondary hover:bg-secondary/90 text-primary font-black shadow-xl transition-all hover:-translate-y-1 w-full sm:w-auto"
               >
                 <Link href="/get-involved">Support Our Work</Link>
               </Button>
@@ -52,7 +52,7 @@ export default function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="h-16 rounded-none px-10 text-sm border-2 border-white/20 text-white hover:bg-white/10 font-bold transition-all"
+                className="h-16 rounded-none px-10 text-sm border-2 border-white/20 text-white hover:bg-white/10 font-bold transition-all w-full sm:w-auto text-center justify-center"
               >
                 <Link href="/get-involved">Get Involved</Link>
               </Button>

@@ -13,10 +13,10 @@ export const Logo: React.FC<LogoProps> = ({ className, showText = true, variant 
   
   return (
     <div className={cn('flex items-center gap-3', className)}>
-      <div className="relative h-12 w-12 flex-shrink-0">
+      <div className="relative h-11 w-11 flex-shrink-0">
         <Image 
           src="/assets/images/bywin logo.png" 
-          alt="BYWI Logo" 
+          alt="BYWIN Logo" 
           fill
           className="object-contain"
           priority
