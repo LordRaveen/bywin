@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Globe, Heart, Mail, Phone, MapPin } from "lucide-react"
+import { Logo } from "./Logo"
 
 const footerLinks = [
   {
@@ -30,14 +31,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
           {/* Logo & Desc */}
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
-                <Heart className="h-5 w-5" />
-              </div>
-              <span className="font-display text-lg font-bold tracking-tight text-primary">BYWI</span>
+            <Link href="/" className="flex items-center group">
+              <Logo variant="dark" />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              Brighter Youth and Women Initiative (BYWI) is dedicated to empowering marginalized communities through sustainable livelihoods and holistic support.
+            <p className="mt-4 text-sm leading-relaxed text-slate-600 font-medium">
+              Brighter Youth and Women Initiative — Empowering people. Transforming communities.
             </p>
             <div className="mt-6 flex space-x-4">
               <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
@@ -84,15 +82,15 @@ export default function Footer() {
             <ul className="mt-4 space-y-4">
               <li className="flex items-start gap-3 text-sm text-slate-600">
                 <MapPin className="h-5 w-5 shrink-0 text-secondary" />
-                <span>12 Mission Road, Central District, Lagos, Nigeria</span>
+                <span>No. 42 Post Office Road Sabon Tasha Kaduna State</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-600">
                 <Phone className="h-5 w-5 shrink-0 text-secondary" />
-                <span>+234 812 345 6789</span>
+                <span>+234 912 536 5885</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-600">
                 <Mail className="h-5 w-5 shrink-0 text-secondary" />
-                <span>info@bywi.org</span>
+                <span>info@brighteryouthandwomeninitiative.org</span>
               </li>
             </ul>
           </div>

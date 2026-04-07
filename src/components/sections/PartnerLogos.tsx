@@ -15,8 +15,8 @@ export default function PartnerLogos() {
     <section className="relative z-30 -mt-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="rounded-none bg-white p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100">
-          <p className="text-center text-sm font-bold text-slate-400 mb-10 tracking-wide uppercase">
-            Trusted by <span className="text-secondary-foreground font-black">500+</span> nonprofits across <span className="text-secondary-foreground font-black">65</span> Countries
+          <p className="text-center text-sm font-bold text-slate-500 mb-10 tracking-wide uppercase">
+            Working with communities across <span className="text-primary font-black">Kaduna State</span> and beyond to create lasting impact.
           </p>
           
           <div className="relative overflow-hidden">

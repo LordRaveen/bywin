@@ -9,12 +9,13 @@ export default function ContactSection() {
           
           {/* Info Column */}
           <div className="flex flex-col justify-center">
-            <span className="text-secondary font-bold tracking-widest uppercase text-sm">Reach Out</span>
+            <span className="text-secondary font-bold tracking-widest uppercase text-sm">Finishing Strong</span>
             <h2 className="mt-6 text-4xl lg:text-6xl font-black tracking-tight text-slate-900 uppercase">
-              Get in <span className="text-primary italic">Touch</span>
+              Your Support <br />
+              Can <span className="text-primary italic">Change a Life</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-500 leading-relaxed max-w-lg">
-              Have questions or want to partner with us? Our team is always ready to hear from you and collaborate for impact.
+            <p className="mt-8 text-xl text-slate-600 font-medium leading-relaxed max-w-lg">
+              With your support, we can expand our reach, empower more individuals, and build stronger communities. Every contribution — big or small — makes a difference.
             </p>
 
             <div className="mt-12 space-y-8">
@@ -24,7 +25,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Email Us</p>
-                  <p className="text-lg font-black text-slate-900">hello@bywi.org</p>
+                  <p className="text-lg font-black text-slate-900">hello@brighteryouthandwomeninitiative.org</p>
                 </div>
               </div>
               
@@ -34,7 +35,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Call Us</p>
-                  <p className="text-lg font-black text-slate-900">+234 (800) BYWI-LIFE</p>
+                  <p className="text-lg font-black text-slate-900">+234 912 536 5885</p>
                 </div>
               </div>
 
@@ -44,7 +45,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Visit Us</p>
-                  <p className="text-lg font-black text-slate-900">Abuja, Federal Capital Territory</p>
+                  <p className="text-lg font-black text-slate-900">No. 42 Post Office Road Sabon Tasha Kaduna State</p>
                 </div>
               </div>
             </div>

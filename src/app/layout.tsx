@@ -13,8 +13,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "BYWI | Brighter Youth and Women Initiative",
-  description: "Empowering Women and Youth through Sustainable Initiatives and Community Empowerment.",
+  title: "Brighter Youth and Women Initiative (BYWIN) — Empowering People, Transforming Communities",
+  description: "Equipping women, young people, and vulnerable individuals with the skills, support, and opportunities they need to thrive and become self-reliant.",
+  icons: {
+    icon: "/assets/images/bywin logo.png",
+  },
 };
 
 export default function RootLayout({

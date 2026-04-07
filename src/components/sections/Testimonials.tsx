@@ -5,19 +5,19 @@ const stories = [
   {
     name: 'Sarah Akpan',
     role: 'Poultry Farming Graduate',
-    content: "BYWI gave me the tools and the training to start my own poultry farm. Now, I can afford to send my children to school and save for the future. It's not just support; it's a new beginning for my entire family.",
+    content: "BYWIN gave me the tools and the training to start my own poultry farm. Now, I can afford to send my children to school and save for the future. It's not just support; it's a new beginning for my entire family.",
     image: '/assets/images/testimonial-1.png'
   },
   {
     name: 'Joseph Okon',
     role: 'Vocational Training Student',
-    content: 'I was unemployed for three years until I joined the BYWI vocational training program. Today, I have a steady income and new skills that will last a lifetime. I am proof that with the right support, we can thrive.',
+    content: 'I was unemployed for three years until I joined the BYWIN vocational training program. Today, I have a steady income and new skills that will last a lifetime. I am proof that with the right support, we can thrive.',
     image: '/assets/images/testimonial-2.png'
   },
   {
     name: 'Mary Udo',
     role: 'Sewing Workshop Beneficiary',
-    content: 'The sewing machines provided by BYWI changed my life. I am now the primary breadwinner for my family and a mentor to other women in my village. We are building a future where every woman can be independent.',
+    content: 'The sewing machines provided by BYWIN changed my life. I am now the primary breadwinner for my family and a mentor to other women in my village. We are building a future where every woman can be independent.',
     image: '/assets/images/testimonial-3.png'
   }
 ]
@@ -31,12 +31,16 @@ export default function Testimonials() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center mb-20">
-          <span className="text-secondary font-bold tracking-widest uppercase text-sm">Voices of Change</span>
+        <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
+          <span className="text-secondary font-bold tracking-widest uppercase text-sm">Stories / Human Angle</span>
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-6xl uppercase">
-            Real <span className="text-secondary">Stories</span>
+            Real People. <span className="text-secondary">Real Change.</span>
           </h2>
-          <div className="mt-6 h-1 w-20 bg-secondary" />
+          <p className="mt-6 text-xl text-emerald-50/70 leading-relaxed font-medium">
+            Behind every program is a story of resilience, growth, and transformation.
+            We have seen women start businesses, young people gain confidence, and families experience new opportunities — all through access to the right support at the right time.
+          </p>
+          <div className="mt-10 h-1 w-20 bg-secondary" />
         </div>
 
         <div className="flex overflow-x-auto gap-8 pb-10 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:gap-12 lg:overflow-visible lg:pb-0 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

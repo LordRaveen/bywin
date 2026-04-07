@@ -29,13 +29,13 @@ export default function CTASection() {
             </div>
 
             <div className="relative z-10 max-w-xl">
-              <span className="text-secondary font-bold tracking-widest uppercase text-sm">Get Involved</span>
+              <span className="text-secondary font-bold tracking-widest uppercase text-sm">Be Part of the Change</span>
               <h2 className="mt-6 text-4xl lg:text-7xl font-black tracking-tight text-white uppercase leading-none">
-                You Can Change <br />
-                A <span className="text-secondary">Life</span> Today
+                Creating Lasting <br />
+                <span className="text-secondary">Impact</span> Together
               </h2>
-              <p className="mt-8 text-xl text-emerald-50/80 leading-relaxed max-w-md">
-                Your support provides the training, tools, and hope necessary for women and youth to break free from poverty. Choose your path to impact.
+              <p className="mt-8 text-xl text-emerald-50/80 leading-relaxed max-w-md font-medium">
+                Creating lasting impact requires collective effort. You can support our mission in several ways: Partner with us, Volunteer your time, or Support our programs through donations.
               </p>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-6">
@@ -48,7 +48,7 @@ export default function CTASection() {
                 
                 <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest transition-all">
                   <Link href="/get-involved" className="flex items-center gap-3">
-                    Join Our Mission
+                    Become a Volunteer
                     <Users className="h-5 w-5" />
                   </Link>
                 </Button>

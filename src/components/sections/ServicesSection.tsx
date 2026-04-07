@@ -59,11 +59,15 @@ export default function ServicesSection() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-20">
+        <div className="mb-20 max-w-3xl">
           <h2 className="text-4xl font-black text-slate-900 leading-tight">
-            Our <span className="underline-yellow">Services</span><br />
-            We are provide!
+            Our Work <br />
+            in <span className="underline-yellow">Action</span>
           </h2>
+          <p className="mt-8 text-lg text-slate-600 font-medium leading-relaxed">
+            Across different communities, we continue to implement projects that address real challenges and create meaningful change.
+            From training sessions to community outreach programs, our work is focused on delivering practical results that improve lives.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">

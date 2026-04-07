@@ -20,30 +20,26 @@ export default function AboutSection() {
           <div className="lg:col-span-5 relative z-10">
             <span className="text-sm font-bold tracking-widest text-[#1b5e4c] uppercase">About us</span>
             <h2 className="mt-4 text-5xl font-black tracking-tight text-slate-900 sm:text-6xl leading-[1.1]">
-              We done with <br />
-              your <span className="underline-yellow">help!</span>
+              We are building <br />
+              lives, <span className="underline-yellow">one opportunity</span> <br />
+              at a time
             </h2>
             
-            <div className="mt-8 space-y-4 text-slate-500 leading-relaxed max-w-xl">
+            <div className="mt-8 space-y-6 text-slate-600 font-medium leading-relaxed max-w-xl">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into
+                At Brighter Youth and Women Initiative, we believe that real change begins when people are given the tools to improve their own lives.
               </p>
-              <ul className="list-disc pl-5 space-y-2 font-medium">
-                <li>electronic typesetting,</li>
-                <li>remaining essentially unchanged.</li>
-              </ul>
               <p>
-                It was popularised in the 1960s with the release of Letraset sheets containing passages, 
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                From skills acquisition to livelihood support, we work closely with communities to empower women, youth, and the elderly to become financially independent and socially confident.
+              </p>
+              <p>
+                Our approach is simple — we listen, we understand, and we act with purpose.
               </p>
             </div>
 
             <div className="mt-10">
-              <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary font-black rounded-none h-14 px-10 text-lg shadow-xl">
-                <Link href="/about">Learn More</Link>
+              <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary font-black rounded-none h-14 px-10 text-lg shadow-xl shrink-0">
+                <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
 

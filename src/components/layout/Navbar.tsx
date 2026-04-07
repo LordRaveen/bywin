@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { Logo } from "./Logo"
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -37,11 +38,8 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-secondary p-1.5 rounded-none group-hover:rotate-0 transition-transform">
-            <Heart className="h-5 w-5 text-primary fill-current" />
-          </div>
-          <span className="text-2xl font-black tracking-tighter text-white">NGO</span>
+        <Link href="/" className="flex items-center transition-opacity hover:opacity-90">
+          <Logo />
         </Link>
 
         {/* Desktop Nav */}

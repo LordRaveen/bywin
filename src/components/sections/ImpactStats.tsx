@@ -3,27 +3,21 @@ import { Users, BookOpen, MapPin, Heart } from 'lucide-react'
 const stats = [
   {
     label: 'Women Empowered',
-    value: '300+',
+    value: 'Hundreds',
     icon: <Users className="h-8 w-8" />,
-    description: 'Empowering women through vocational training and mentorship.'
-  },
-  {
-    label: 'Youth Trained',
-    value: '150+',
-    icon: <BookOpen className="h-8 w-8" />,
-    description: 'Providing market-relevant skills to the next generation.'
+    description: 'Women and youth empowered through our vocational programs.'
   },
   {
     label: 'Communities',
-    value: '10+',
+    value: 'Multiple',
     icon: <MapPin className="h-8 w-8" />,
-    description: 'Deeply rooted in diverse local communities across the region.'
+    description: 'Reaching diverse communities across Kaduna State.'
   },
   {
-    label: 'Lives Impacted',
-    value: '5K+',
+    label: 'Sustainability',
+    value: 'Ongoing',
     icon: <Heart className="h-8 w-8" />,
-    description: 'Sustainable change reaching families and individuals.'
+    description: 'Ongoing support for beneficiaries to build sustainable income.'
   },
 ]
 
@@ -39,11 +33,10 @@ export default function ImpactStats() {
         <div className="max-w-3xl">
           <span className="text-secondary font-bold tracking-widest uppercase text-sm">Our Impact</span>
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-6xl uppercase">
-            Measuring our <span className="text-secondary">Progress</span>
+            Our Impact <span className="text-secondary">So Far</span>
           </h2>
           <p className="mt-6 text-xl text-emerald-50/70 max-w-2xl">
-            We are committed to transparency and measurable results in everything we do. 
-            Our impact is reflected in the lives of the people we serve.
+            Every number represents a life changed and a future restored.
           </p>
         </div>
 

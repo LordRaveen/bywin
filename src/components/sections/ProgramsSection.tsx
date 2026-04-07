@@ -7,23 +7,23 @@ const programs = [
   {
     id: '01',
     title: 'Poultry Farming Training',
-    description: 'Providing sustainable livelihoods through poultry management training and initial chick supply to marginalized women across 10+ states.',
+    description: 'We train women and youth in poultry farming, providing them with the knowledge and resources to start and sustain their own businesses.',
     icon: <Bird className="h-6 w-6" />,
     image: '/assets/images/program-poultry.png',
     color: 'text-amber-500'
   },
   {
     id: '02',
-    title: 'Sustainable Fish Farming',
-    description: 'Teaching modern aquaculture techniques to youth, ensuring food security and consistent income generations with eco-friendly methods.',
+    title: 'Fish Farming Empowerment',
+    description: 'Our fish farming program equips beneficiaries with modern techniques and support to create reliable sources of income.',
     icon: <Fish className="h-6 w-6" />,
     image: '/assets/images/program-fish-farming.png',
     color: 'text-sky-500'
   },
   {
     id: '03',
-    title: 'Sewing & Skills Acquisition',
-    description: 'Equipping women with professional tailoring skills and vocational training to build their own independent small-scale businesses.',
+    title: 'Skills Acquisition',
+    description: 'We provide hands-on training in sewing and other vocational skills, helping individuals develop sustainable livelihoods.',
     icon: <Scissors className="h-6 w-6" />,
     image: '/assets/images/program-sewing.png',
     color: 'text-lime-500'
@@ -38,12 +38,12 @@ export default function ProgramsSection() {
           <span className="text-sm font-bold tracking-widest text-[#1b5e4c] uppercase">Empowerment</span>
           <div className="flex flex-col md:flex-row md:items-end justify-between w-full gap-8">
             <h2 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl uppercase leading-tight">
-              Our Focused <br />
-              Programs
+              What <br />
+              We Do
             </h2>
             <div className="max-w-md">
-              <p className="text-lg text-slate-500 leading-relaxed">
-                Hand-ups, not hand-outs. We design interventions that empower communities to sustain themselves through skills and local resources.
+              <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                We provide practical, life-changing support through targeted programs designed to meet real needs in our communities.
               </p>
               <Link 
                 href="/programs" 

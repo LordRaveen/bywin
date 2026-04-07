@@ -8,7 +8,7 @@ Clean ✅
 NGO-appropriate ✅
 Conversion-focused ✅
 
-But it still needs adjustments for your specific NGO (BYWI).
+But it still needs adjustments for your specific NGO (BYWIN).
 
 👍 What This Design Gets Right
 1. Strong Hero Section (Very Important)

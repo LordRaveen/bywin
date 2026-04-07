@@ -31,28 +31,31 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Content Left */}
           <div className="max-w-xl text-left">
-            <h1 className="text-5xl font-black tracking-tight text-white sm:text-7xl leading-[1.1]">
-              Charity is <br />
-              an <span className="underline-yellow">Act of</span> <br />
-              A Soft Heart!
+            <h1 className="text-xl font-black tracking-tight text-white sm:text-5xl leading-[1.1]">
+              Empowering <br />
+              <span className="underline-yellow">Women and Youth</span> <br />
+              to Build Sustainable<br />
+              Futures
             </h1>
-            <p className="mt-8 text-lg leading-relaxed text-white/70 font-medium max-w-md">
-              Join us in our mission to build brighter futures for women and youth through sustainable community-led initiatives in agriculture and vocational training.
+            <p className="mt-8 text-sm leading-relaxed text-white/70 font-medium max-w-md">
+              Brighter Youth and Women Initiative (BYWIN) is committed to equipping women, young people, and vulnerable individuals with the skills, support, and opportunities they need to thrive and become self-reliant.
             </p>
             <div className="mt-12 flex flex-wrap items-center gap-10">
               <Button 
                 asChild 
                 size="lg" 
-                className="h-16 rounded-none px-10 text-lg bg-secondary hover:bg-secondary/90 text-primary font-black shadow-xl transition-all hover:-translate-y-1"
+                className="h-16 rounded-none px-10 text-sm bg-secondary hover:bg-secondary/90 text-primary font-black shadow-xl transition-all hover:-translate-y-1"
               >
-                <Link href="/get-involved">Join our mission</Link>
+                <Link href="/get-involved">Support Our Work</Link>
               </Button>
-              <button className="flex items-center gap-3 group">
-                <div className="flex h-12 w-12 items-center justify-center rounded-none border-2 border-white/20 text-white group-hover:bg-white/10 transition-all">
-                  <Play className="h-4 w-4 fill-current ml-1" />
-                </div>
-                <span className="text-lg font-bold text-white group-hover:text-secondary transition-colors">Learn more</span>
-              </button>
+              <Button 
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-16 rounded-none px-10 text-sm border-2 border-white/20 text-white hover:bg-white/10 font-bold transition-all"
+              >
+                <Link href="/get-involved">Get Involved</Link>
+              </Button>
             </div>
           </div>
 
