@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Content Left */}
           <div className="max-w-xl text-left">
-            <h1 className="text-3xl font-black tracking-tight text-white md:text-5xl leading-[1.2] md:leading-[1.1]">
+            <h1 className="text-5xl font-black tracking-tight text-white md:text-5xl leading-[1.2] md:leading-[1.1]">
               Empowering <br />
               <span className="underline-yellow">Women and Youth</span> <br />
               to Build Sustainable<br />

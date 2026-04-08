@@ -3,21 +3,27 @@ import { Users, BookOpen, MapPin, Heart } from 'lucide-react'
 const stats = [
   {
     label: 'Women Empowered',
-    value: 'Hundreds',
+    value: '5,000+',
     icon: <Users className="h-8 w-8" />,
-    description: 'Women and youth empowered through our vocational programs.'
+    description: 'Providing women and youth with tools for financial independence.'
   },
   {
     label: 'Communities',
-    value: 'Multiple',
+    value: '20+',
     icon: <MapPin className="h-8 w-8" />,
-    description: 'Reaching diverse communities across Kaduna State.'
+    description: 'Directly reaching diverse communities across Kaduna State.'
   },
   {
-    label: 'Sustainability',
-    value: 'Ongoing',
+    label: 'Projects',
+    value: '12+',
     icon: <Heart className="h-8 w-8" />,
-    description: 'Ongoing support for beneficiaries to build sustainable income.'
+    description: 'Successful vocational and empowerment projects completed.'
+  },
+  {
+    label: 'Skills Training',
+    value: '2,500+',
+    icon: <BookOpen className="h-8 w-8" />,
+    description: 'Youth and vulnerable persons trained in vocational skills.'
   },
 ]
 
