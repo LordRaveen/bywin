@@ -1,26 +1,108 @@
 import Link from "next/link"
-import { Globe, Heart, Mail, Phone, MapPin } from "lucide-react"
+import { Heart, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./Logo"
 
 const footerLinks = [
   {
-    title: "Quick Links",
+    title: "Organization",
     links: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Programs", href: "/programs" },
-      { name: "Recent Projects", href: "/projects" },
-      { name: "Donate Now", href: "/donate" },
-      { name: "Get Involved", href: "/get-involved" },
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Impact", href: "/impact" },
+      { name: "Contact", href: "/contact" },
+      { name: "Blog & News", href: "/blog" },
+      { name: "Gallery", href: "/gallery" },
     ],
   },
   {
-    title: "Support",
+    title: "Our Work",
     links: [
+      { name: "Programs", href: "/programs" },
+      { name: "Projects", href: "/projects" },
+      { name: "Get Involved", href: "/get-involved" },
+      { name: "Donate Now", href: "/donate" },
       { name: "FAQ", href: "/faq" },
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-      { name: "Contact Us", href: "/contact" },
     ],
+  },
+]
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://facebook.com",
+    hoverColor: "hover:text-[#1877F2]",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com",
+    hoverColor: "hover:text-[#E4405F]",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    ),
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com",
+    hoverColor: "hover:text-[#0A66C2]",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    name: "YouTube",
+    href: "https://youtube.com",
+    hoverColor: "hover:text-[#FF0000]",
+    icon: (
+      <svg
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.14 1 12 1 12s0 3.86.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.86 23 12 23 12s0-3.86-.46-5.58z" />
+        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+      </svg>
+    ),
   },
 ]
 
@@ -38,18 +120,16 @@ export default function Footer() {
               Brighter Youth and Women Initiative — Empowering people. Transforming communities.
             </p>
             <div className="mt-6 flex space-x-4">
-              <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Globe className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Globe className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Globe className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-slate-400 hover:text-primary transition-colors">
-                <Globe className="h-5 w-5" />
-              </Link>
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className={`text-slate-400 transition-all duration-300 hover:scale-110 ${social.hoverColor}`}
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </Link>
+              ))}
             </div>
           </div>
 

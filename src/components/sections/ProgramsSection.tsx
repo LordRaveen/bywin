@@ -94,10 +94,10 @@ export default function ProgramsSection() {
                 </p>
                 
                 <div className="mt-8 pt-6 border-t border-slate-100">
-                  <Button asChild variant="ghost" className="h-auto p-0 font-black text-xs uppercase tracking-[0.2em] group-hover:text-primary transition-colors">
-                    <Link href={`/programs/${program.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-4">
+                  <Button asChild variant="ghost" className="h-auto p-0 font-black text-[10px] uppercase tracking-[0.25em] text-slate-900/60 group-hover:text-[#1b5e4c] transition-colors">
+                    <Link href="/programs" className="flex items-center gap-4">
                       Explore Details
-                      <div className="h-8 w-8 flex items-center justify-center border border-slate-200 group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <div className="h-8 w-8 flex items-center justify-center border border-slate-300 group-hover:border-[#1b5e4c] group-hover:bg-[#1b5e4c] group-hover:text-white transition-all">
                         <ArrowRight className="h-4 w-4" />
                       </div>
                     </Link>

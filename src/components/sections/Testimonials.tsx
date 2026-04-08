@@ -65,14 +65,14 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
           <span className="text-secondary font-bold tracking-widest uppercase text-sm">Stories / Human Angle</span>
-          <h2 className="mt-4 text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-tight">
+          <h2 className="mt-4 text-3xl md:text-3xl lg:text-4xl font-black tracking-tight text-white uppercase leading-tight">
             Real People. <span className="text-secondary">Real Change.</span>
           </h2>
-          <p className="mt-6 text-base md:text-lg text-emerald-50/70 leading-relaxed font-medium">
+          <p className="mt-6 text-base md:text-sm text-emerald-50/70 leading-relaxed font-medium">
             Behind every program is a story of resilience, growth, and transformation.
-            We have seen women start businesses, young people gain confidence, and families experience new opportunities — all through access to the right support at the right time.
+            We have seen women start businesses, young people gain confidence, and families experience new opportunities.
           </p>
-          <div className="mt-10 h-1 w-20 bg-secondary" />
+          <div className="mt-4 h-1 w-20 bg-secondary" />
         </div>
 
         <div className="relative group">
@@ -87,12 +87,12 @@ export default function Testimonials() {
                 className="w-full flex-shrink-0 px-2 sm:px-10 snap-center"
               >
                 <div className="flex flex-col bg-emerald-900/30 border border-emerald-800/50 p-8 md:p-16 transition-all group/card hover:bg-emerald-900/50 max-w-5xl mx-auto items-center text-center">
-                  <Quote className="h-12 w-12 text-secondary mb-10 group-hover/card:scale-110 transition-transform" />
-                  <p className="text-xl md:text-3xl leading-relaxed text-emerald-50/90 font-medium italic mb-14 max-w-4xl">
+                  <Quote className="h-10 w-10 text-secondary mb-10 group-hover/card:scale-110 transition-transform" />
+                  <p className="text-xl md:text-lg leading-relaxed text-emerald-50/90 font-medium italic mb-4 max-w-4xl">
                     &ldquo;{story.content}&rdquo;
                   </p>
                   
-                  <div className="flex items-center gap-6 pt-10 border-t border-emerald-800/50 w-full justify-center">
+                  <div className="flex items-center gap-6 pt-4 border-t border-emerald-800/50 w-full justify-center">
                     <div className="h-20 w-20 flex-shrink-0 border-4 border-white shadow-xl relative grayscale group-hover/card:grayscale-0 transition-all duration-500 rounded-none">
                       <Image 
                         src={story.image} 

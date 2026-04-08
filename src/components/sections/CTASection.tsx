@@ -10,12 +10,12 @@ export default function CTASection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           
           {/* Photo Column */}
-          <div className="relative h-[400px] lg:h-auto overflow-hidden group">
+          <div className="relative h-[400px] lg:h-auto group bg-slate-100">
             <Image 
               src="/assets/images/volunteers-charity.png" 
               alt="Changing lives together" 
               fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              className="object-cover transition-transform duration-1000 group-hover:scale-110 rounded-none"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#1b5e4c]/60 to-transparent lg:hidden" />
@@ -30,25 +30,25 @@ export default function CTASection() {
 
             <div className="relative z-10 max-w-xl">
               <span className="text-secondary font-bold tracking-widest uppercase text-sm">Be Part of the Change</span>
-              <h2 className="mt-6 text-3xl md:text-5xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.1] lg:leading-none">
+              <h2 className="mt-6 text-xl md:text-3xl lg:text-4xl font-black tracking-tight text-white uppercase leading-[1.1] lg:leading-none">
                 Creating Lasting <br />
                 <span className="text-secondary">Impact</span> Together
               </h2>
-              <p className="mt-8 text-lg md:text-xl text-emerald-50/80 leading-relaxed max-w-md font-medium">
+              <p className="mt-8 text-sm md:text-lg text-emerald-50/80 leading-relaxed max-w-md font-medium">
                 Creating lasting impact requires collective effort. You can support our mission in several ways: Partner with us, Volunteer your time, or Support our programs through donations.
               </p>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Button asChild className="bg-secondary hover:bg-secondary/90 text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest shadow-xl group w-full sm:w-auto text-center justify-center">
                   <Link href="/donate" className="flex items-center gap-3">
-                    Donate Now
+                    Donate
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
                 
                 <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#1b5e4c] font-black rounded-none h-16 px-12 text-lg uppercase tracking-widest transition-all w-full sm:w-auto text-center justify-center">
                   <Link href="/get-involved" className="flex items-center gap-3">
-                    Become a Volunteer
+                    Volunteer
                     <Users className="h-5 w-5" />
                   </Link>
                 </Button>
